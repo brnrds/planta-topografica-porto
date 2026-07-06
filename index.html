@@ -28,7 +28,7 @@
   <meta name="twitter:description" content="Deep-zoom viewer for the 1892 historical map of Porto, Portugal.">
   <meta name="twitter:image" content="https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png">
 
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=5">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=6">
   <script src="openseadragon/openseadragon.min.js"></script>
 
   <script type="application/ld+json">
@@ -87,18 +87,13 @@
     OpenSeadragon(viewerOptions);
   </script>
 
-  <footer class="bottom-bar" id="bottom-bar">
-    <div class="bottom-bar-expand" id="bottom-bar-expand" aria-hidden="true">
-      <p>Scroll to zoom, drag to pan. Project background and credits on <a href="https://brnrds.com/work/vintage-map-of-porto">brnrds.com</a>.</p>
-    </div>
-    <div class="bottom-bar-credits">
+  <div class="credits-outer">
+    <div class="credits">
       "Planta topográfica da cidade do Porto", 1892, Augusto Gerardo Teles Ferreira |
       <a href="http://gisaweb.cm-porto.pt/units-of-description/documents/380170/documents/?q=&page=1" target="_blank" rel="noopener">made available</a>
       by <a href="http://www.cm-porto.pt/" target="_blank" rel="noopener">CMP</a> |
-      <button type="button" class="about-toggle" id="about-toggle" aria-expanded="false" aria-controls="bottom-bar-expand">About</button> |
       code by <a href="https://brnrds.com/work/vintage-map-of-porto" rel="noopener">Bernardo Santos</a>
     </div>
-  </footer>
-  <script src="js/bottom-bar.js"></script>
+  </div>
 </body>
 </html>
