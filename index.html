@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131899434-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-131899434-1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planta Topográfica do Porto (1892) — mapa histórico em alta resolução | Bernardo Santos</title>
+  <meta name="description" content="Explore a Planta Topográfica da Cidade do Porto (1892), de Augusto Gerardo Teles Ferreira, num visualizador deep zoom de alta resolução. Vintage map of Porto, Portugal.">
+  <link rel="canonical" href="https://apps.brnrds.com/planta-topografica-porto-1892/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bernardo Santos">
+  <meta property="og:title" content="Planta Topográfica do Porto (1892) — mapa histórico em alta resolução">
+  <meta property="og:description" content="Mapa histórico do Porto em deep zoom: a planta topográfica de 1892 de Augusto Gerardo Teles Ferreira, digitalizada em alta resolução.">
+  <meta property="og:url" content="https://apps.brnrds.com/planta-topografica-porto-1892/">
+  <meta property="og:image" content="https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png">
+  <meta property="og:image:alt" content="Planta topográfica da cidade do Porto, 1892">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:locale:alternate" content="en_GB">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Planta Topográfica do Porto (1892) — vintage map of Porto">
+  <meta name="twitter:description" content="Deep-zoom viewer for the 1892 topographic map of Porto by Augusto Gerardo Teles Ferreira.">
+  <meta name="twitter:image" content="https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png">
+
+  <link rel="alternate" hreflang="pt" href="https://apps.brnrds.com/planta-topografica-porto-1892/">
+  <link rel="alternate" hreflang="en" href="https://apps.brnrds.com/planta-topografica-porto-1892/">
+  <link rel="alternate" hreflang="x-default" href="https://apps.brnrds.com/planta-topografica-porto-1892/">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=2">
+  <script src="openseadragon/openseadragon.min.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Planta Topográfica da Cidade do Porto (1892)",
+    "description": "Interactive deep-zoom viewer for the 1892 topographic map of Porto by Augusto Gerardo Teles Ferreira.",
+    "url": "https://apps.brnrds.com/planta-topografica-porto-1892/",
+    "inLanguage": ["pt-PT", "en"],
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "contentUrl": "https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png",
+      "name": "Planta topográfica da cidade do Porto, 1892",
+      "caption": "Planta topográfica da cidade do Porto, 1892, Augusto Gerardo Teles Ferreira",
+      "width": 1536,
+      "height": 1024
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Bernardo Santos",
+      "url": "https://brnrds.com"
+    },
+    "about": {
+      "@type": "CreativeWork",
+      "name": "Planta topográfica da cidade do Porto",
+      "dateCreated": "1892",
+      "creator": {
+        "@type": "Person",
+        "name": "Augusto Gerardo Teles Ferreira"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Câmara Municipal do Porto",
+        "url": "https://www.cm-porto.pt/"
+      }
+    },
+    "keywords": [
+      "Planta topográfica Porto 1892",
+      "mapa histórico Porto",
+      "vintage map of Porto",
+      "Augusto Gerardo Teles Ferreira",
+      "deep zoom map",
+      "cartografia Porto"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="demoarea">
+    <div id="tiles" class="openseadragon"></div>
+  </div>
+  <script type="text/javascript">
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var params = new URLSearchParams(window.location.search);
+    var dziUrl = params.get("dzi") || "https://static.brnrds.com/porto1892.dzi";
+    var viewerOptions = {
+      id: "tiles",
+      prefixUrl: "openseadragon/images/",
+      debugMode: false,
+      immediateRender: false,
+      loadDestinationTilesOnAnimation: false,
+      tileSources: dziUrl
+    };
+    if (isIOS) {
+      viewerOptions.imageLoaderLimit = 2;
+      viewerOptions.maxTilesPerFrame = 1;
+      viewerOptions.maxImageCacheCount = 120;
+      viewerOptions.timeout = 60000;
+      viewerOptions.animationTime = 0.5;
+      viewerOptions.blendTime = 0;
+    }
+    OpenSeadragon(viewerOptions);
+  </script>
+  <div class="credits-outer">
+    <div class="credits">
+      "Planta topográfica da cidade do Porto", 1892, Augusto Gerardo Teles Ferreira |
+      <a href="http://gisaweb.cm-porto.pt/units-of-description/documents/380170/documents/?q=&page=1" target="_blank">made available</a>
+      by <a href="http://www.cm-porto.pt/" target="_blank">CMP</a> |
+      code by <a href="https://brnrds.com" target="_blank">Bernardo Santos</a>
+    </div>
+  </div>
+</body>
+</html>
