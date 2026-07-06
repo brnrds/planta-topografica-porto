@@ -34,8 +34,7 @@
   <meta name="twitter:description" content="Deep-zoom viewer for the 1892 historical map of Porto, Portugal.">
   <meta name="twitter:image" content="https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png">
 
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=3">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/about.css?v=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=4">
   <script src="openseadragon/openseadragon.min.js"></script>
 
   <script type="application/ld+json">
@@ -51,7 +50,7 @@
     "author": {
       "@type": "Person",
       "name": "Bernardo Santos",
-      "url": "https://brnrds.com/porto-map/"
+      "url": "https://brnrds.com/work/vintage-map-of-porto"
     },
     "isPartOf": {
       "@type": "WebSite",
@@ -93,28 +92,6 @@
   </script>
 </head>
 <body>
-  <div class="about-toolbar">
-    <button type="button" class="about-toolbar-btn" id="about-open" aria-expanded="false" aria-controls="about-panel">About</button>
-    <a class="about-toolbar-btn" href="about/">Info</a>
-  </div>
-
-  <div class="about-panel-backdrop" id="about-panel-backdrop" hidden></div>
-  <aside class="about-panel" id="about-panel" aria-hidden="true" aria-labelledby="about-panel-title">
-    <button type="button" class="about-panel-close" id="about-close" aria-label="Close">×</button>
-    <h2 id="about-panel-title">Porto map (1892)</h2>
-    <p>
-      Interactive <strong>old map of Porto</strong> (<strong>Oporto</strong>) — the 1892 topographic
-      survey by Augusto Gerardo Teles Ferreira. Scroll to zoom, drag to pan.
-    </p>
-    <div class="about-panel-links">
-      <a href="about/">About this historical Porto map (English)</a>
-      <a href="sobre/">Sobre o mapa histórico do Porto (português)</a>
-      <a href="overview/">Map overview image</a>
-      <a href="https://brnrds.com/porto-map/">Project page on brnrds.com</a>
-      <a href="https://gisaweb.cm-porto.pt/units-of-description/series/370582/" target="_blank" rel="noopener">Source: Câmara Municipal do Porto</a>
-    </div>
-  </aside>
-
   <div class="demoarea">
     <div id="tiles" class="openseadragon"></div>
   </div>
@@ -140,15 +117,27 @@
     }
     OpenSeadragon(viewerOptions);
   </script>
-  <script src="js/about-panel.js"></script>
-  <div class="credits-outer">
-    <div class="credits">
+
+  <footer class="bottom-bar" id="bottom-bar">
+    <div class="bottom-bar-expand" id="bottom-bar-expand" aria-hidden="true">
+      <p>
+        Interactive <strong>old map of Porto</strong> (<strong>Oporto</strong>), 1892 — Augusto Gerardo Teles Ferreira.
+        Scroll to zoom, drag to pan.
+      </p>
+      <ul class="bottom-bar-links">
+        <li><a href="about/">About this historical Porto map (English)</a></li>
+        <li><a href="sobre/">Sobre o mapa histórico do Porto (português)</a></li>
+        <li><a href="overview/">Map overview image</a></li>
+      </ul>
+    </div>
+    <div class="bottom-bar-credits">
       "Planta topográfica da cidade do Porto", 1892, Augusto Gerardo Teles Ferreira |
       <a href="http://gisaweb.cm-porto.pt/units-of-description/documents/380170/documents/?q=&page=1" target="_blank" rel="noopener">made available</a>
       by <a href="http://www.cm-porto.pt/" target="_blank" rel="noopener">CMP</a> |
-      <a href="about/">About</a> |
-      code by <a href="https://brnrds.com/porto-map/" target="_blank" rel="noopener">Bernardo Santos</a>
+      <button type="button" class="about-toggle" id="about-toggle" aria-expanded="false" aria-controls="bottom-bar-expand">About</button> |
+      code by <a href="https://brnrds.com/work/vintage-map-of-porto" target="_blank" rel="noopener">Bernardo Santos</a>
     </div>
-  </div>
+  </footer>
+  <script src="js/bottom-bar.js"></script>
 </body>
 </html>
