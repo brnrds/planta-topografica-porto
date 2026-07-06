@@ -21,42 +21,75 @@
   <meta property="og:description" content="Interactive historical map of Porto: deep-zoom 1892 topographic plan in high resolution.">
   <meta property="og:url" content="https://apps.brnrds.com/planta-topografica-porto-1892/">
   <meta property="og:image" content="https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png">
-  <meta property="og:image:alt" content="Old map of Porto, Portugal, 1892 — interactive topographic viewer">
+  <meta property="og:image:alt" content="Old map of Porto, Portugal, 1892 — topographic survey overview">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Porto Map (1892) — Old Map of Oporto">
   <meta name="twitter:description" content="Deep-zoom viewer for the 1892 historical map of Porto, Portugal.">
   <meta name="twitter:image" content="https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png">
 
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=6">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=7">
   <script src="openseadragon/openseadragon.min.js"></script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Porto Map (1892) — Historical Deep-Zoom Viewer",
-    "description": "Interactive deep-zoom viewer for the 1892 topographic map of Porto (Oporto), Portugal, by Augusto Gerardo Teles Ferreira.",
-    "url": "https://apps.brnrds.com/planta-topografica-porto-1892/",
-    "applicationCategory": "MapApplication",
-    "operatingSystem": "Web",
-    "author": {
-      "@type": "Person",
-      "name": "Bernardo Santos",
-      "url": "https://brnrds.com/work/vintage-map-of-porto"
-    },
-    "isPartOf": {
-      "@type": "CreativeWork",
-      "name": "Porto Map — 1892 Historical Deep-Zoom Viewer",
-      "url": "https://brnrds.com/work/vintage-map-of-porto"
-    },
-    "primaryImageOfPage": {
-      "@type": "ImageObject",
-      "contentUrl": "https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png",
-      "name": "Old map of Porto, 1892",
-      "width": 1536,
-      "height": 1024
-    }
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Porto Map (1892) — Historical Deep-Zoom Viewer",
+        "description": "Interactive deep-zoom viewer for the 1892 topographic map of Porto (Oporto), Portugal, by Augusto Gerardo Teles Ferreira.",
+        "url": "https://apps.brnrds.com/planta-topografica-porto-1892/",
+        "applicationCategory": "MapApplication",
+        "operatingSystem": "Web",
+        "author": {
+          "@type": "Person",
+          "name": "Bernardo Santos",
+          "url": "https://brnrds.com/work/vintage-map-of-porto"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "contentUrl": "https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png",
+          "name": "Old map of Porto, 1892",
+          "width": 1536,
+          "height": 1024
+        }
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Planta topográfica da cidade do Porto",
+        "alternateName": ["Porto map", "Oporto map", "Old map of Porto"],
+        "dateCreated": "1892",
+        "creator": { "@type": "Person", "name": "Augusto Gerardo Teles Ferreira" },
+        "provider": { "@type": "Organization", "name": "Câmara Municipal do Porto", "url": "https://www.cm-porto.pt/" },
+        "contentLocation": {
+          "@type": "City",
+          "name": "Porto",
+          "containedInPlace": { "@type": "Country", "name": "Portugal" }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where can I see an old map of Porto online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This page provides an interactive high-resolution viewer for the 1892 topographic map of Porto (Oporto). Scroll to zoom and drag to pan across the full city survey."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the 1892 Porto map?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Planta Topográfica da Cidade do Porto (1892) is the first scientific cadastral survey of the city at 1:500 scale, directed by Augusto Gerardo Teles Ferreira for the Câmara Municipal do Porto."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -87,13 +120,68 @@
     OpenSeadragon(viewerOptions);
   </script>
 
-  <div class="credits-outer">
-    <div class="credits">
+  <footer class="bottom-bar" id="bottom-bar">
+    <div class="bottom-bar-expand" id="bottom-bar-expand" aria-hidden="true">
+      <div class="bottom-bar-content">
+        <h1>Old map of Porto (1892)</h1>
+        <p>
+          This interactive <strong>Porto map</strong> presents the <em>Planta Topográfica da Cidade do Porto</em>
+          of <strong>1892</strong> — a detailed <strong>old map of Oporto</strong> (Porto, Portugal) drawn at
+          1:500 scale under <strong>Augusto Gerardo Teles Ferreira</strong> for the
+          <a href="https://www.cm-porto.pt/" rel="noopener">Câmara Municipal do Porto</a>.
+          It is widely regarded as the first rigorous cadastral survey of the city, recording streets, building
+          footprints, and relief at the end of the nineteenth century.
+        </p>
+        <p>
+          If you are looking for a <strong>historical map of Porto</strong>, a <strong>vintage map of Oporto</strong>,
+          or a high-resolution <strong>1892 Porto map</strong>, this deep-zoom viewer lets you explore the full
+          survey without losing detail — from the Douro riverfront and Ribeira to the expanding urban fabric of
+          the period.
+        </p>
+
+        <img class="bottom-bar-preview" src="images/porto1892-preview.png" width="1536" height="1024"
+             alt="Old map of Porto, Portugal, 1892 — vintage topographic plan of Oporto showing the Douro river and historic city centre">
+
+        <h2>How to use this map</h2>
+        <ul>
+          <li>Scroll or pinch to zoom into streets and individual blocks.</li>
+          <li>Click and drag to pan across the city.</li>
+          <li>Use the on-screen controls for home view, full screen, and rotation.</li>
+        </ul>
+
+        <h2>Historical context</h2>
+        <p>
+          Earlier plans of Porto include George Balck’s 1813 <em>Planta Redonda</em> and the 1833 Society for the
+          Diffusion of Useful Knowledge engraving of Oporto. The 1892 topographic survey post-dates those and
+          offers far greater urban detail. The original sheets are preserved at the
+          <a href="https://gisaweb.cm-porto.pt/units-of-description/series/370582/" rel="noopener">Porto Municipal Archive</a>
+          and are also accessible through the municipality’s
+          <a href="https://www.cm-porto.pt/cartas-historicas-interativas-do-porto/cartas-historicas-interativas-do-porto" rel="noopener">Cartas Históricas Interativas</a> service.
+        </p>
+
+        <h2>Mapa histórico do Porto</h2>
+        <p>
+          Esta página disponibiliza um <strong>mapa antigo do Porto</strong> — a planta topográfica de 1892 —
+          num visualizador interactivo de alta resolução. Ampliar para ver ruas e quarteirões; arrastar para
+          percorrer a cidade. Documentos originais: Câmara Municipal do Porto.
+        </p>
+      </div>
+    </div>
+    <div class="bottom-bar-credits">
       "Planta topográfica da cidade do Porto", 1892, Augusto Gerardo Teles Ferreira |
       <a href="http://gisaweb.cm-porto.pt/units-of-description/documents/380170/documents/?q=&page=1" target="_blank" rel="noopener">made available</a>
       by <a href="http://www.cm-porto.pt/" target="_blank" rel="noopener">CMP</a> |
+      <button type="button" class="about-toggle" id="about-toggle" aria-expanded="false" aria-controls="bottom-bar-expand">About</button> |
       code by <a href="https://brnrds.com/work/vintage-map-of-porto" rel="noopener">Bernardo Santos</a>
     </div>
-  </div>
+  </footer>
+  <script src="js/bottom-bar.js"></script>
+
+  <noscript>
+    <div class="noscript-info">
+      <h1>Old map of Porto (1892)</h1>
+      <p>Interactive Porto map and old map of Oporto: the 1892 topographic survey by Augusto Gerardo Teles Ferreira, in high-resolution deep zoom. Source: Câmara Municipal do Porto.</p>
+    </div>
+  </noscript>
 </body>
 </html>
