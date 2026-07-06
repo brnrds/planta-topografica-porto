@@ -28,7 +28,7 @@
   <meta name="twitter:description" content="Deep-zoom viewer for the 1892 historical map of Porto, Portugal.">
   <meta name="twitter:image" content="https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png">
 
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=7">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=8">
   <script src="openseadragon/openseadragon.min.js"></script>
 
   <script type="application/ld+json">
@@ -120,10 +120,11 @@
     OpenSeadragon(viewerOptions);
   </script>
 
-  <footer class="bottom-bar" id="bottom-bar">
-    <div class="bottom-bar-expand" id="bottom-bar-expand" aria-hidden="true">
-      <div class="bottom-bar-content">
-        <h1>Old map of Porto (1892)</h1>
+  <div class="about-backdrop" id="about-backdrop" hidden></div>
+  <div class="about-sheet" id="about-sheet" aria-hidden="true" aria-labelledby="about-sheet-title">
+    <button type="button" class="about-sheet-close" id="about-close" aria-label="Close">×</button>
+    <div class="about-sheet-content">
+      <h1 id="about-sheet-title">Old map of Porto (1892)</h1>
         <p>
           This interactive <strong>Porto map</strong> presents the <em>Planta Topográfica da Cidade do Porto</em>
           of <strong>1892</strong> — a detailed <strong>old map of Oporto</strong> (Porto, Portugal) drawn at
@@ -139,7 +140,7 @@
           the period.
         </p>
 
-        <img class="bottom-bar-preview" src="images/porto1892-preview.png" width="1536" height="1024"
+        <img class="about-sheet-preview" src="images/porto1892-preview.png" width="1536" height="1024"
              alt="Old map of Porto, Portugal, 1892 — vintage topographic plan of Oporto showing the Douro river and historic city centre">
 
         <h2>How to use this map</h2>
@@ -165,14 +166,16 @@
           num visualizador interactivo de alta resolução. Ampliar para ver ruas e quarteirões; arrastar para
           percorrer a cidade. Documentos originais: Câmara Municipal do Porto.
         </p>
-      </div>
     </div>
+  </div>
+
+  <footer class="bottom-bar" id="bottom-bar">
     <div class="bottom-bar-credits">
       "Planta topográfica da cidade do Porto", 1892, Augusto Gerardo Teles Ferreira |
       <a href="http://gisaweb.cm-porto.pt/units-of-description/documents/380170/documents/?q=&page=1" target="_blank" rel="noopener">made available</a>
       by <a href="http://www.cm-porto.pt/" target="_blank" rel="noopener">CMP</a> |
-      <button type="button" class="about-toggle" id="about-toggle" aria-expanded="false" aria-controls="bottom-bar-expand">About</button> |
-      code by <a href="https://brnrds.com/work/vintage-map-of-porto" rel="noopener">Bernardo Santos</a>
+      code by <a href="https://brnrds.com/work/vintage-map-of-porto" rel="noopener">Bernardo Santos</a> |
+      <button type="button" class="about-toggle" id="about-toggle" aria-expanded="false" aria-controls="about-sheet">About</button>
     </div>
   </footer>
   <script src="js/bottom-bar.js"></script>
