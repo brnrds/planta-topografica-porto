@@ -127,7 +127,7 @@ ol.for-examples li {
     background-image: url("../blank.png");
     background-repeat: repeat;
     font-family: Verdana, Helvetica, Arial, Sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     color: #333;
     line-height: 1.5;
     overflow-y: auto;
@@ -166,18 +166,19 @@ ol.for-examples li {
 }
 
 .about-sheet-content h1 {
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 600;
     margin: 0 0 10px;
 }
 
 .about-sheet-content h2 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     margin: 16px 0 8px;
 }
 
 .about-sheet-content p {
+    font-size: 14px;
     margin: 0 0 10px;
 }
 
