@@ -28,7 +28,7 @@
   <meta name="twitter:description" content="Deep-zoom viewer for the 1892 historical map of Porto, Portugal.">
   <meta name="twitter:image" content="https://apps.brnrds.com/planta-topografica-porto-1892/images/porto1892-preview.png">
 
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=9">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=10">
   <script src="openseadragon/openseadragon.min.js"></script>
 
   <script type="application/ld+json">
@@ -121,98 +121,179 @@
   </script>
 
   <div class="about-backdrop" id="about-backdrop" hidden></div>
-  <div class="about-sheet" id="about-sheet" aria-hidden="true" aria-labelledby="about-sheet-title">
+  <div class="about-sheet" id="about-sheet" aria-hidden="true" aria-labelledby="about-sheet-title-en">
     <button type="button" class="about-sheet-close" id="about-close" aria-label="Close">×</button>
+    <div class="about-language-toggle" role="group" aria-label="About language">
+      <button type="button" class="is-active" data-about-language="en" aria-pressed="true"
+              aria-controls="about-content-en">EN</button><span aria-hidden="true">/</span><button type="button"
+              data-about-language="pt" aria-pressed="false" aria-controls="about-content-pt">PT</button>
+    </div>
     <div class="about-sheet-content">
-      <section lang="pt-PT">
-      <h1 id="about-sheet-title">A Carta Topográfica da Cidade do Porto, 1892</h1>
+      <section id="about-content-pt" lang="pt-PT" hidden>
+      <h1 id="about-sheet-title-pt">A Carta Topográfica da Cidade do Porto, 1892</h1>
         <p>
-          A <em>Planta Topográfica da Cidade do Porto</em> é o primeiro levantamento integral, científico e
-          cadastral do Porto. Produzida à escala 1:500 sob a direcção do topógrafo militar
-          <strong>Augusto Gerardo Teles Ferreira</strong>, regista o concelho no final do século XIX com um grau
-          de exactidão que as plantas anteriores da cidade não procuraram alcançar. As suas ruas, edifícios,
-          divisões de propriedade, campos, cursos de água e relevo fizeram dela simultaneamente um retrato do
-          Porto em 1892 e a base geográfica de trabalho da sua posterior administração urbanística.
+          A <em>Planta Topográfica da Cidade do Porto</em> é geralmente tida como o primeiro levantamento
+          topográfico integral e científico do Porto, e o seu primeiro registo cadastral sistemático. Desenhada
+          à escala 1:500 sob a direcção do topógrafo militar
+          <strong>Augusto Gerardo Teles Ferreira</strong>, regista o concelho no final do século XIX com uma
+          exactidão que nenhuma planta anterior da cidade tinha sequer tentado. As ruas, os edifícios, as
+          divisões de propriedade, os campos, as linhas de água e o relevo fizeram dela, ao mesmo tempo, um
+          retrato do Porto em 1892 e a base de trabalho da administração urbanística nas décadas seguintes.
         </p>
 
         <img class="about-sheet-preview" src="images/porto1892-preview.png" width="1536" height="1024"
              alt="Carta topográfica do Porto de 1892, mostrando o Douro e a cidade no final do século XIX">
 
-        <h2>Por que motivo era necessária ao município</h2>
+        <h2>Por que motivo o Porto precisava de um novo levantamento</h2>
         <p>
-          Em meados do século XIX, o Porto expandia-se para além do centro histórico densamente edificado. Novas
+          Em meados do século XIX, o Porto crescia para lá do centro histórico densamente edificado. Novas
           estradas, caminhos-de-ferro, abastecimento de água, drenagem, saneamento e administração da propriedade
-          exigiam uma descrição medida do terreno. As plantas existentes — incluindo a planta circular de George
-          Balck, de 1813, a planta de Frederico Perry Vidal, de 1844, e posteriores revisões — eram representações
-          valiosas, mas não combinavam nivelamento rigoroso, curvas de nível e um levantamento parcelar de toda a
-          cidade.
-        </p>
-        <p>
-          A Câmara Municipal do Porto pediu pela primeira vez ao Governo a nomeação de um engenheiro em 1856,
-          para preparar uma planta e o nivelamento da cidade como apoio aos melhoramentos projectados. O pedido
-          foi recusado por falta de verbas do Estado, embora a Câmara tenha sido autorizada a requisitar pessoal
-          técnico se lhe pagasse os vencimentos. O engenheiro Carlos de Pézerat ofereceu os seus serviços em 1859,
-          recomendado por Filipe Folque, director dos trabalhos geodésicos do Reino, mas a Câmara não aceitou. Em
-          1862, o município obteve do Instituto Geográfico a triangulação existente do Porto. O decreto nacional de
-          31 de Dezembro de 1864, que determinava a elaboração de planos gerais de melhoramentos para as principais
-          vilas e cidades do Reino, tornou ainda mais urgente uma base cartográfica municipal exacta.
+          pediam uma descrição medida do terreno. As plantas disponíveis — a planta circular de George Balck, de
+          1813, a de Frederico Perry Vidal, de 1844, e as revisões posteriores — tinham valor, mas nenhuma
+          combinava nivelamento rigoroso, curvas de nível e um levantamento parcelar de toda a cidade.
         </p>
 
-        <h2>A primeira encomenda, 1869–1877</h2>
+        <h2>Do pedido municipal à administração directa, 1856–1877</h2>
         <p>
-          A Câmara publicou um programa de concurso pormenorizado no <em>Diário do Governo</em> de 20 de Setembro
-          de 1869. Exigia um levantamento à escala 1:500, abrangendo inicialmente 3.150 hectares e posteriormente
-          ampliado para cerca de 3.975 hectares — essencialmente o território sob administração municipal, e não
-          apenas o núcleo urbano. As altitudes deviam ser medidas rigorosamente e representadas por curvas de nível
-          com equidistância de dois metros. Os edifícios e terrenos livres deviam ser diferenciados, tal como a
-          propriedade pública, estatal, corporativa e particular; os terrenos cultivados deviam distinguir-se dos
-          destinados a outros usos.
+          A iniciativa partiu do Porto. Em 1856, a Câmara Municipal pediu ao Governo a nomeação de um engenheiro
+          para preparar uma planta e o nivelamento da cidade como apoio aos melhoramentos projectados. O pedido foi
+          recusado por falta de verbas do Estado, embora o Porto tenha sido autorizado a requisitar pessoal técnico
+          se lhe pagasse os vencimentos. O engenheiro Carlos de Pézerat ofereceu os seus serviços em 1859,
+          recomendado por Filipe Folque, director dos trabalhos geodésicos do Reino, mas a Câmara não aceitou a
+          proposta.
+        </p>
+        <p>
+          O Porto recorreu depois ao aparelho técnico da administração central. Em 1862, a Câmara pediu aos
+          serviços geodésicos do Estado que realizassem a triangulação necessária à estrutura do levantamento. O
+          engenheiro Filipe Joaquim de Sousa Quintella iniciou esse trabalho em Setembro de 1862; os cálculos foram
+          dados como concluídos em 1867 e o processo resultante foi entregue à Câmara, que suportou a despesa.
+          O Estado punha a capacidade científica; o Porto pedia-a e pagava-a.
+        </p>
+        <p>
+          O quadro legal alterou-se enquanto estes trabalhos preliminares decorriam. O artigo 50.º do decreto
+          nacional de 31 de Dezembro de 1864 determinou que o Governo procedesse a um plano geral de melhoramentos
+          do Porto por intermédio de uma comissão formada por um engenheiro das Obras Públicas, um engenheiro ou
+          arquitecto proposto pela Câmara e o delegado de saúde da cidade. Note-se que o decreto não encomendou
+          esta planta: o pedido portuense de uma planta medida era oito anos anterior. O decreto veio reforçar um
+          objectivo que a cidade já perseguia.
+        </p>
+        <p>
+          Tudo isto se insere na modernização administrativa, científica e infra-estrutural da Regeneração e, em
+          termos mais largos, do Fontismo. O decreto de 1864 foi apresentado pelo ministro das Obras Públicas João
+          Crisóstomo de Abreu e Sousa, no governo do duque de Loulé. O Estado deu o quadro legal e técnico; a
+          iniciativa, o contrato e o financiamento foram da Câmara.
+        </p>
+        <p>
+          O engenheiro civil da Câmara elaborou um programa de concurso pormenorizado, publicado no <em>Diário do
+          Governo</em> de 20 de Setembro de 1869. Exigia um levantamento à escala 1:500, abrangendo inicialmente
+          3.150 hectares e posteriormente ampliado para cerca de 3.975 hectares — essencialmente o território sob
+          administração municipal, e não apenas o núcleo urbano. As altitudes deviam ser medidas rigorosamente e
+          representadas por curvas de nível com equidistância de dois metros. Os edifícios e terrenos livres deviam
+          ser diferenciados, tal como a propriedade pública, estatal, corporativa e particular; os terrenos
+          cultivados deviam distinguir-se dos destinados a outros usos.
         </p>
         <p>
           Foram abertas cinco propostas em 21 de Outubro de 1869, apresentadas por Bartholomeu Achilles Dejante;
           J. C. Chelmich; Carlos de Pézerat; João Joaquim de Matos, José Augusto Corrêa de Barros e António Maria
           Kopke de Carvalho; e Frederico Perry Vidal com Manuel do Couto Guimarães. A empreitada foi adjudicada a
-          Dejante, cuja proposta era, por larga margem, a menos dispendiosa. Outros concorrentes advertiram
-          formalmente que a exactidão prometida não poderia ser alcançada por aquele preço. Dejante morreu em 1877
-          sem ter praticamente iniciado os trabalhos.
+          Dejante, de longe o mais barato. Os outros concorrentes avisaram formalmente que a exactidão prometida
+          não se conseguia por aquele preço. Dejante morreu em 1877 praticamente sem ter começado.
         </p>
 
-        <h2>Teles Ferreira e o gabinete municipal de levantamento</h2>
+        <h2>Teles Ferreira e o gabinete municipal de levantamento, 1877–1892</h2>
         <p>
           Em 1877, a Câmara abandonou a empreitada externa fracassada e colocou o trabalho sob administração
           municipal directa. O engenheiro municipal Agnelo José Moreira foi encarregado da tarefa e pediu a
           colaboração do capitão Augusto Gerardo Teles Ferreira, que entrou ao serviço da Câmara em Agosto de 1877.
         </p>
         <p>
-          Teles Ferreira nasceu em 1830 e morreu em 1895. Oficial do Exército nomeado topógrafo de primeira classe
-          em 1856, colaborara no levantamento hidrográfico da Barra do Douro de 1861–1862 e já concluíra, com Emílio
-          Vidigal Salgado, o levantamento cadastral de Viana do Castelo à escala 1:500, em 1868–1869. Também essa
-          planta fora produzida como base para melhoramentos municipais. Quando chegou ao Porto, Teles Ferreira
-          declarou possuir vinte e cinco anos de experiência prática nestes trabalhos. Na publicação da planta
-          reduzida era identificado como general de brigada reformado.
+          Teles Ferreira (1830–1895) era oficial do Exército, nomeado topógrafo de primeira classe em 1856.
+          Colaborara no levantamento hidrográfico da Barra do Douro de 1861–1862 e concluíra, com Emílio Vidigal
+          Salgado, o levantamento cadastral de Viana do Castelo à escala 1:500, em 1868–1869 — também esse feito
+          como base para melhoramentos municipais. Quando chegou ao Porto, declarou vinte e cinco anos de
+          experiência prática nestes trabalhos. Quando a planta reduzida foi publicada, era já identificado como
+          general de brigada reformado.
         </p>
         <p>
-          O avanço foi imediato. Em Maio de 1878 tinham sido levantados 52 hectares nas particularmente difíceis
-          freguesias da Sé e da Vitória; o total de campo posteriormente comunicado para esta primeira fase era de
-          275 hectares, distribuídos por trinta folhas de desenho. O desenho ficou inicialmente atrasado em relação
-          ao trabalho de campo, porque o desenhador da Câmara apenas podia trabalhar na planta depois de cumprir as
-          suas restantes obrigações municipais. O trabalho foi depois organizado num gabinete especializado,
-          dirigido por Teles Ferreira. Entre os funcionários conhecidos encontravam-se o capitão de cavalaria
-          Fernando da Costa Maia, que ali trabalhou entre Setembro de 1882 e Dezembro de 1888, Manuel Pereira da
-          Costa, José Baptista Figueiredo e Moysés Augusto, juntamente com desenhadores municipais e externos.
-          Subsistem mapas pormenorizados do progresso do trabalho de campo e de gabinete realizado entre Dezembro
-          de 1887 e Fevereiro de 1892.
+          O avanço foi imediato. Em Maio de 1878 estavam levantados 52 hectares nas freguesias da Sé e da Vitória,
+          terreno particularmente difícil; o total de campo comunicado para esta primeira fase foi de 275 hectares,
+          em trinta folhas de desenho. O desenho começou por ficar atrasado em relação ao campo — o desenhador da
+          Câmara só podia trabalhar na planta depois de despachar as restantes obrigações municipais. O trabalho
+          acabou organizado num gabinete próprio, dirigido por Teles Ferreira. Entre os funcionários conhecidos
+          contam-se o capitão de cavalaria Fernando da Costa Maia, que ali serviu entre Setembro de 1882 e Dezembro
+          de 1888, Manuel Pereira da Costa, José Baptista Figueiredo e Moysés Augusto, além de desenhadores
+          municipais e externos. Subsistem mapas pormenorizados do progresso do trabalho de campo e de gabinete
+          entre Dezembro de 1887 e Fevereiro de 1892.
         </p>
 
-        <h2>O que o levantamento contém</h2>
+        <h2>O que foi cartografado e como</h2>
         <p>
-          O esquema completo compreende 464 quadrículas, cobrindo cada uma aproximadamente 400 por 250 metros. À
-          escala 1:500, um centímetro no papel representa cinco metros no terreno. A planta representa a implantação
-          de cada edifício e as parcelas, ruas e caminhos, muros e limites, jardins e terrenos cultivados, ribeiros e
-          elementos de água, obras públicas, topónimos e a forma do terreno. As curvas de nível de dois metros foram
-          a primeira representação sistemática do relevo do Porto a esta escala. A combinação de informação
-          planimétrica, altimétrica e cadastral permitia que o mesmo levantamento apoiasse o desenho de ruas, as
-          infra-estruturas, a administração da propriedade e o planeamento urbanístico geral.
+          O esquema completo compreende 464 quadrículas, cada uma cobrindo cerca de 400 por 250 metros. À escala
+          1:500, um centímetro no papel corresponde a cinco metros no terreno. A planta mostra a implantação de
+          cada edifício e as parcelas, ruas e caminhos, muros e limites, jardins e terrenos cultivados, ribeiros e
+          elementos de água, obras públicas, topónimos e a forma do terreno. As curvas de nível de dois metros
+          foram a primeira representação sistemática do relevo do Porto a esta escala. Juntando informação
+          planimétrica, altimétrica e cadastral, o mesmo levantamento servia para o desenho de ruas, as
+          infra-estruturas, a administração da propriedade e o planeamento urbanístico em geral.
+        </p>
+        <p>
+          Não houve qualquer observação aérea. O programa de 1869 assentava na triangulação já fornecida ao
+          município, exigia dois pontos trigonométricos em cada folha, impunha tolerâncias apertadas na medição
+          dos polígonos e das cotas e previa um nivelamento rigoroso em duas fases. Tudo foi medido a partir do
+          terreno, por equipas municipais, ao longo de vários anos. As fontes descrevem os métodos geométricos,
+          mas não dizem exactamente que instrumentos foram usados.
+        </p>
+
+        <h2>Sobre o detalhe em áreas de acesso privado</h2>
+        <p>
+          O que por vezes parece a planta de uma casa é, em regra, apenas a sua implantação: alas, anexos, pátios,
+          poços de luz e outras divisões do volume construído. As paredes que dividem os compartimentos interiores
+          geralmente não aparecem. Nos jardins e quintas, porém, surgem muros, caminhos, culturas, lagos e outros
+          pormenores que não seriam necessariamente visíveis da via pública. Há três vias plausíveis para essa
+          informação: entrada no terreno, uma planta cedida pelo proprietário, ou documentação que já existisse nos
+          serviços municipais. Os documentos publicados não permitem dizer qual delas foi usada em cada propriedade.
+        </p>
+        <p>
+          A via arquivística é historicamente possível. O arquivo da Câmara conserva plantas, prospectos e licenças
+          dos séculos XVIII e XIX, embora nessa altura aparecessem sobretudo como documentos isolados, e não como os
+          processos de licenciamento completos e ordenados que se tornaram habituais no início do século XX. Os
+          <em>Livros de Plantas de Casas</em> mostram que muitos pedidos de obras passavam pelo município — mas
+          muitos diziam respeito a fachadas, reparações, abertura de portas e janelas ou acrescento de pisos, e não
+          conteriam necessariamente a implantação integral da propriedade, os jardins ou os elementos de água. O
+          arquivo podia preencher lacunas aqui e ali, mas não era, por si só, um cadastro completo e actualizado de
+          todo o concelho.
+        </p>
+        <p>
+          Também não se encontrou prova de uma pesquisa sistemática desses fundos pela equipa de Teles Ferreira.
+          Os registos conhecidos distinguem trabalho de campo e trabalho de gabinete, sem identificarem um
+          arquivista ou uma campanha de compilação documental. Em 1892, Teles Ferreira propôs que os projectos
+          futuramente apresentados à Câmara passassem a ser localizados em cópias da nova planta geral, e descreveu
+          a redução cadastral como base para uma futura matriz predial rigorosa. Ambas as propostas sugerem que,
+          antes da carta, a informação municipal não estava reunida numa base geográfica comum.
+        </p>
+        <p>
+          O próprio programa enfraquece a hipótese de um acesso forçado e universal. Quanto às propriedades
+          particulares, permitia que fossem «apresentados por massas, mas marcando-se-lhes os seus limites junto às
+          vias públicas». Subsistem 428 das 464 minutas de campo, incluindo algumas reproduções digitais, mas nos
+          registos acessíveis não aparece qualquer cláusula a dar aos topógrafos um direito geral de entrada, nem
+          documentação de autorizações, recusas ou plantas cedidas pelos proprietários.
+        </p>
+        <p>
+          A Carta Constitucional de 1826, então em vigor, declarava a casa um asilo inviolável e só admitia a
+          entrada diurna nos casos e pela forma determinados por lei. Esta garantia dizia respeito ao domicílio e
+          não resolve, por si só, o acesso aos terrenos de uma quinta. A primeira disposição cadastral portuguesa
+          que encontrei a conceder expressamente aos técnicos acesso a propriedades particulares, punindo a
+          oposição com multa, é de 1911 — dezanove anos depois da conclusão da planta — e não se aplica
+          retroactivamente. O mais prudente é concluir que os topógrafos terão entrado em muitas propriedades por
+          cooperação ou acordo, mas não há prova publicada de que os donos não pudessem recusar.
+        </p>
+        <h2>Conclusão, folhas sobreviventes e edição pública</h2>
+        <p>
+          Teles Ferreira publicou pela Câmara Municipal, em 1890, uma memória descritiva de oito páginas. Num
+          relatório de 30 de Março de 1892 declarou o levantamento à escala 1:500 praticamente concluído, faltando
+          apenas rectificações que permitissem referir todo o trabalho, de forma uniforme, àquele ano. É isto que
+          explica a data da planta: 1892 é o ano de referência e de conclusão, não o ano em que todas as folhas
+          foram levantadas, nem aquele em que a planta completa foi posta à venda.
         </p>
         <p>
           Foram preparadas duas versões manuscritas à escala 1:500: uma a preto e branco e outra colorida a
@@ -222,52 +303,31 @@
           original, o gabinete produziu ainda uma redução cadastral à escala 1:2.500 e uma planta geral à escala
           1:5.000.
         </p>
-
-        <h2>Conclusão e edição pública</h2>
-        <p>
-          Teles Ferreira publicou pela Câmara Municipal, em 1890, uma memória descritiva de oito páginas. Num
-          relatório datado de 30 de Março de 1892, declarou que o levantamento à escala 1:500 estava praticamente
-          concluído, embora faltassem rectificações que permitissem referir uniformemente todo o trabalho àquele
-          ano. Esta distinção explica a data da planta: 1892 é o seu ano de referência e conclusão, não o ano em que
-          todas as folhas foram levantadas nem aquele em que a planta completa foi colocada à venda pela primeira
-          vez.
-        </p>
         <p>
           Em 11 de Maio de 1892, a Câmara abriu novo concurso para gravar a redução à escala 1:5.000. Teles Ferreira
-          apoiou a proposta apresentada pelo grupo representado por Cassiano Augusto Vidal da Maia na
-          Direcção-Geral dos Trabalhos Geodésicos, especializado em gravura litográfica em pedra. O original foi
-          enviado para Lisboa em Junho de 1893. As pedras gravadas e a planta impressa regressaram ao Porto em
-          Junho de 1895.
+          apoiou a proposta do grupo representado por Cassiano Augusto Vidal da Maia na Direcção-Geral dos
+          Trabalhos Geodésicos, especializado em gravura litográfica em pedra. O original seguiu para Lisboa em
+          Junho de 1893; as pedras gravadas e a planta impressa regressaram ao Porto em Junho de 1895. A gravura e
+          a produção de 1.500 exemplares custaram 5.000$000 réis — cinco contos, qualquer coisa como 220.000 euros
+          em poder de compra actual.
         </p>
         <p>
-          A gravura e produção de 1.500 exemplares custaram <strong>5.000$000 réis — cinco contos, ou cinco milhões
-          de réis — aproximadamente 220.000 euros em poder de compra de 2026</strong>. Este valor moderno é
-          necessariamente uma comparação de ordem de grandeza: converte cinco contos à paridade de finais do
-          século XIX de 4$500 réis por libra esterlina, aplica o índice de preços no consumidor de longa duração do
-          Reino Unido e converte depois o resultado em euros. Portugal suspendera a convertibilidade em ouro em
-          1891 e não existe uma série oficial e contínua de preços no consumidor portugueses que recue até 1895. À
-          paridade-ouro anterior, o mesmo valor nominal representava aproximadamente 8,13 quilogramas de ouro
-          fino, o que demonstra por que razão diferentes medidas de valor histórico podem produzir equivalências
-          muito superiores.
-        </p>
-        <p>
-          Teles Ferreira propôs recuperar parte da despesa através da venda de exemplares às repartições públicas e
-          ao público em geral. Previa um interesse particular no Brasil, onde os emigrantes do Norte de Portugal
-          poderiam comprar uma planta do Porto pelas recordações que preservava. A edição pública resultante foi
-          uma litografia de seis folhas à escala 1:5.000, publicada em 1895 e explicitamente descrita no título como
-          reduzida da planta à escala 1:500 mandada levantar pela Câmara Municipal do Porto, referida ao ano de 1892
-          e dirigida por Teles Ferreira, coadjuvado por Fernando da Costa Maia e pelos restantes empregados.
+          Teles Ferreira propôs recuperar parte da despesa vendendo exemplares às repartições públicas e ao público
+          em geral. Contava com particular interesse no Brasil, onde os emigrantes do Norte de Portugal poderiam
+          comprar uma planta do Porto pelas recordações que guardava. A edição pública foi uma litografia de seis
+          folhas à escala 1:5.000, publicada em 1895, cujo título a descreve expressamente como reduzida da planta
+          à escala 1:500 mandada levantar pela Câmara Municipal do Porto, referida ao ano de 1892 e dirigida por
+          Teles Ferreira, coadjuvado por Fernando da Costa Maia e pelos restantes empregados.
         </p>
 
-        <h2>Custódia municipal e publicações posteriores</h2>
+        <h2>Propriedade municipal, utilização posterior e redescoberta</h2>
         <p>
-          A planta foi propriedade municipal desde o início; não se tratou de uma obra particular posteriormente
-          adquirida pelo Porto. O original colorido à escala 1:500 foi formalmente entregue no arquivo da Câmara
-          Municipal em 18 de Agosto de 1893 e transferido internamente para o Arquivo Histórico Municipal do Porto
-          em 1984. Durante décadas, o levantamento permaneceu a única representação rigorosa do território urbano à
-          escala 1:500 ao dispor da Câmara e serviu de modelo a actualizações posteriores. Continuou a sustentar o
-          planeamento municipal até ao aparecimento de uma nova geração de levantamentos e planos em meados do
-          século XX.
+          A planta foi municipal desde o início — não foi uma obra particular que o Porto tenha comprado depois.
+          O original colorido à escala 1:500 deu entrada formal no arquivo da Câmara em 18 de Agosto de 1893 e
+          passou internamente para o Arquivo Histórico Municipal do Porto em 1984. Durante décadas foi a única
+          representação rigorosa do território urbano à escala 1:500 ao dispor da Câmara, serviu de modelo a
+          actualizações posteriores e sustentou o planeamento municipal até uma nova geração de levantamentos e
+          planos, em meados do século XX.
         </p>
         <p>
           Em 1992, o município assinalou o centenário com a exposição e o catálogo <em>Uma Cartografia Exemplar: O
@@ -280,106 +340,169 @@
           inicialmente no levantamento de Teles Ferreira.
         </p>
 
-        <h2>Fontes</h2>
-        <ul>
-          <li><a href="https://sigarra.up.pt/faup/pt/conteudos_service.conteudos_cont?pct_id=7000&amp;pv_cod=36SaaCaO5Nb5" rel="noopener">Rui Tavares, “A Carta Topográfica da Cidade do Porto de 1892: Uma Base Cartográfica para a Gestão Urbanística Municipal”</a>.</li>
-          <li><a href="https://gisaweb.cm-porto.pt/units-of-description/documents/380170/" rel="noopener">Arquivo Municipal do Porto, registo de catálogo PT-CMP-AM/PUB/CMPRT/PC/0020</a>.</li>
-          <li><a href="https://eviterbo.fcsh.unl.pt/wiki/Augusto_Teles_Ferreira" rel="noopener">eViterbo, Universidade Nova de Lisboa, registo biográfico de Augusto Teles Ferreira</a>.</li>
-          <li><a href="https://www.monumentos.gov.pt/Site/APP_PagesUser/SIPA.aspx?id=26828" rel="noopener">Inventário português do património arquitectónico, registo histórico de Viana do Castelo</a>.</li>
-          <li><a href="https://www.fc.up.pt/pessoas/jagoncal/porto/" rel="noopener">Faculdade de Ciências da Universidade do Porto, mapas históricos do Porto</a>.</li>
-          <li><a href="https://www.cm-porto.pt/files/uploads/cms/cmp/241/files/3934/relatorio-de-gestao-2018.pdf" rel="noopener">Câmara Municipal do Porto, Relatório de Gestão de 2018</a>.</li>
-          <li><a href="https://cochinilha.wordpress.com/2017/03/20/porto-1892/" rel="noopener">Notícia contemporânea da disponibilização integral em linha, 20 de Março de 2017</a>.</li>
-          <li><a href="https://www.nber.org/papers/w4860" rel="noopener">National Bureau of Economic Research, paridade portuguesa com a libra esterlina durante o padrão-ouro</a>.</li>
-          <li><a href="https://www.bankofengland.co.uk/monetary-policy/inflation/inflation-calculator" rel="noopener">Banco de Inglaterra, metodologia da inflação de longa duração</a>.</li>
-          <li><a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" rel="noopener">Banco Central Europeu, taxas de câmbio de referência do euro</a>.</li>
-        </ul>
       </section>
 
-      <section lang="en">
-      <h1>The Topographical Map of Porto, 1892</h1>
+      <section id="about-content-en" lang="en">
+      <h1 id="about-sheet-title-en">The Topographical Map of Porto, 1892</h1>
         <p>
-          The <em>Planta Topográfica da Cidade do Porto</em> is the first complete scientific and cadastral
-          survey of Porto. Produced at 1:500 under the direction of military topographer
-          <strong>Augusto Gerardo Teles Ferreira</strong>, it records the municipality at the close of the
-          nineteenth century with a degree of precision that earlier plans of the city did not attempt. Its
-          streets, buildings, property divisions, fields, watercourses and relief made it both a portrait of
-          Porto in 1892 and the working geographical foundation of its subsequent urban government.
+          The <em>Planta Topográfica da Cidade do Porto</em> is generally regarded as Porto’s first complete
+          scientific topographical survey, and its first systematic cadastral record. Drawn at 1:500 under the
+          direction of military topographer <strong>Augusto Gerardo Teles Ferreira</strong>, it records the
+          municipality at the close of the nineteenth century with a precision no earlier plan of the city had
+          even attempted. Its streets, buildings, property divisions, fields, watercourses and relief made it
+          both a portrait of Porto in 1892 and the working base for the city's administration in the decades
+          that followed.
         </p>
 
         <img class="about-sheet-preview" src="images/porto1892-preview.png" width="1536" height="1024"
              alt="The 1892 topographical map of Porto, showing the Douro and the city at the end of the nineteenth century">
 
-        <h2>Why the municipality needed it</h2>
+        <h2>Why Porto needed a new survey</h2>
         <p>
-          By the middle of the nineteenth century, Porto was expanding beyond the densely built historic centre.
-          New roads, railways, water supply, drainage, sanitation and property administration all required a
-          measured account of the terrain. Existing maps—including George Balck’s circular plan of 1813,
-          Frederico Perry Vidal’s plan of 1844 and later revisions—were valuable representations, but they did not
-          combine precise levelling, contour lines and a city-wide parcel survey.
-        </p>
-        <p>
-          The Porto City Council first asked the national government for an engineer in 1856, to prepare a city
-          plan and levelling survey in support of projected improvements. The request was refused for lack of
-          government funds, although the Council was allowed to requisition technical personnel if it paid their
-          salaries. Engineer Carlos de Pézerat offered his services in 1859, with the recommendation of Filipe
-          Folque, director of the kingdom’s geodetic works, but the Council did not accept. In 1862 the municipality
-          obtained the existing triangulation of Porto from the Geographical Institute. The national decree of
-          31 December 1864, which called for general improvement plans for the kingdom’s principal towns and
-          cities, made the need for an accurate municipal base map still more urgent.
+          By the middle of the nineteenth century, Porto was growing beyond the densely built historic centre.
+          New roads, railways, water supply, drainage, sanitation and property administration all called for a
+          measured account of the terrain. The available maps—George Balck’s circular plan of 1813, Frederico
+          Perry Vidal’s plan of 1844, and later revisions—had their value, but none combined precise levelling,
+          contour lines and a city-wide parcel survey.
         </p>
 
-        <h2>The first commission, 1869–1877</h2>
+        <h2>From a municipal request to direct administration, 1856–1877</h2>
         <p>
-          The Council published a detailed competition programme in the government gazette on 20 September 1869.
-          It required a survey at 1:500, initially covering 3,150 hectares and later enlarged to approximately
-          3,975 hectares—essentially the territory under municipal administration, rather than only the urban
-          core. Heights were to be measured rigorously and represented by contours at two-metre intervals.
-          Buildings and open land were to be distinguished, as were public, state, corporate and private property;
-          cultivated ground was to be differentiated from land put to other uses.
+          The initiative began with Porto. In 1856 the City Council asked the national government to appoint an
+          engineer to prepare a city plan and levelling survey for its projected improvements. The request was
+          refused for lack of state funds, although Porto was authorised to requisition technical personnel if it
+          paid their salaries. Engineer Carlos de Pézerat offered his services in 1859, recommended by Filipe
+          Folque, director of the kingdom’s geodetic works, but the Council did not accept his offer.
+        </p>
+        <p>
+          Porto then turned to the central government’s technical apparatus. In 1862 the Council asked the national
+          geodetic service to undertake the triangulation needed as the survey’s framework. Engineer Filipe Joaquim
+          de Sousa Quintella began that work in September 1862; its calculations were reported complete in 1867,
+          and the resulting file was delivered to the Council, which bore the expense. The state supplied the
+          scientific capacity; Porto asked for it and paid for it.
+        </p>
+        <p>
+          The legal context changed while this preliminary work was under way. Article 50 of the national decree of
+          31 December 1864 required the government to proceed with a general improvement plan for Porto through a
+          commission comprising a state public-works engineer, an engineer or architect proposed by the Council,
+          and the city’s health delegate. Note that the decree did not itself commission this map: Porto’s request
+          for a measured plan came eight years earlier. The decree reinforced a goal the city was already pursuing.
+        </p>
+        <p>
+          All of this belongs to the administrative, scientific and infrastructural modernisation of the
+          Regeneration and, more broadly, of <em>Fontismo</em>. The 1864 decree was presented by Public Works
+          Minister João Crisóstomo de Abreu e Sousa, under the Duke of Loulé’s government. The state provided the
+          legal and technical framework; the initiative, the contract and the money were the Council's.
+        </p>
+        <p>
+          The Council’s civil engineer prepared a detailed competition programme, published in the government
+          gazette on 20 September 1869. It required a survey at 1:500, initially covering 3,150 hectares and later
+          enlarged to approximately 3,975 hectares—essentially the territory under municipal administration rather
+          than only the urban core. Heights were to be measured rigorously and represented by contours at two-metre
+          intervals. Buildings and open land were to be distinguished, as were public, state, corporate and private
+          property; cultivated ground was to be differentiated from land put to other uses.
         </p>
         <p>
           Five proposals were opened on 21 October 1869, from Bartholomeu Achilles Dejante; J. C. Chelmich;
           Carlos de Pézerat; João Joaquim de Matos, José Augusto Corrêa de Barros and António Maria Kopke de
-          Carvalho; and Frederico Perry Vidal with Manuel do Couto Guimarães. The contract went to Dejante, whose
-          bid was by far the least expensive. Rival bidders formally warned that the promised accuracy could not
-          be achieved for his price. Dejante died in 1877 having practically not begun the work.
+          Carvalho; and Frederico Perry Vidal with Manuel do Couto Guimarães. The contract went to Dejante, by far
+          the cheapest. The other bidders formally warned that the promised accuracy could not be had for his
+          price. Dejante died in 1877 having barely begun.
         </p>
 
-        <h2>Teles Ferreira and the municipal survey office</h2>
+        <h2>Teles Ferreira and the municipal survey office, 1877–1892</h2>
         <p>
           In 1877 the Council abandoned the failed external contract and brought the undertaking under direct
           municipal administration. Municipal engineer Agnelo José Moreira was placed in charge and requested the
           assistance of Captain Augusto Gerardo Teles Ferreira, who entered the Council’s service in August 1877.
         </p>
         <p>
-          Teles Ferreira was born in 1830 and died in 1895. An Army officer appointed first-class topographer in
-          1856, he had assisted the 1861–1862 hydrographic survey of the Douro bar and had already completed, with
-          Emílio Vidigal Salgado, the 1:500 cadastral survey of Viana do Castelo in 1868–1869. That map had also
-          been made as the basis for municipal improvements. When he came to Porto, Teles Ferreira stated that he
-          had twenty-five years of practical experience in this work. By the publication of the reduced Porto map
-          he was described as a retired brigadier general.
+          Teles Ferreira (1830–1895) was an Army officer, appointed first-class topographer in 1856. He had
+          assisted the 1861–1862 hydrographic survey of the Douro bar and had completed, with Emílio Vidigal
+          Salgado, the 1:500 cadastral survey of Viana do Castelo in 1868–1869—also made as the basis for
+          municipal improvements. When he came to Porto he claimed twenty-five years of practical experience in
+          this kind of work. By the time the reduced map was published, he was listed as a retired brigadier
+          general.
         </p>
         <p>
-          Progress became immediate. By May 1878, 52 hectares had been surveyed in the exceptionally difficult
-          parishes of Sé and Vitória; the field total subsequently reported for this early phase was 275 hectares
-          distributed across thirty drawing sheets. Drawing initially lagged behind fieldwork because the
-          Council’s draughtsman could work on the map only after completing his ordinary municipal duties. Work was
-          later organised into a dedicated survey office directed by Teles Ferreira. Its known staff included
-          cavalry captain Fernando da Costa Maia, who served from September 1882 to December 1888, Manuel Pereira
-          da Costa, José Baptista Figueiredo and Moysés Augusto, together with municipal and outside draughtsmen.
-          Detailed progress tables survive for the field and office work undertaken between December 1887 and
-          February 1892.
+          Progress was immediate. By May 1878, 52 hectares had been surveyed in the parishes of Sé and Vitória,
+          exceptionally difficult ground; the field total reported for this early phase was 275 hectares across
+          thirty drawing sheets. Drawing initially lagged behind fieldwork—the Council’s draughtsman could only
+          work on the map after his ordinary municipal duties were done. The work was eventually organised into a
+          dedicated survey office directed by Teles Ferreira. Its known staff included cavalry captain Fernando da
+          Costa Maia, who served from September 1882 to December 1888, Manuel Pereira da Costa, José Baptista
+          Figueiredo and Moysés Augusto, along with municipal and outside draughtsmen. Detailed progress tables
+          survive for the field and office work between December 1887 and February 1892.
         </p>
 
-        <h2>What the survey contains</h2>
+        <h2>What was mapped and how</h2>
         <p>
-          The complete scheme comprises 464 grid positions, each covering approximately 400 by 250 metres. At
-          1:500, one centimetre on paper represents five metres on the ground. The map depicts individual building
-          footprints and plots, streets and paths, walls and boundaries, gardens and cultivated land, streams and
-          water features, public works, place names and the form of the terrain. The two-metre contours were the
-          first systematic representation of Porto’s relief at this scale. The combination of planimetric,
-          altimetric and cadastral information allowed the same survey to support street design, infrastructure,
-          property administration and general urban planning.
+          The complete scheme comprises 464 grid positions, each covering roughly 400 by 250 metres. At 1:500,
+          one centimetre on paper is five metres on the ground. The map shows individual building footprints and
+          plots, streets and paths, walls and boundaries, gardens and cultivated land, streams and water features,
+          public works, place names and the shape of the terrain. The two-metre contours were the first systematic
+          representation of Porto’s relief at this scale. With planimetric, altimetric and cadastral information
+          in one place, the same survey could serve street design, infrastructure, property administration and
+          urban planning in general.
+        </p>
+        <p>
+          There was no aerial observation of any kind. The 1869 programme was based on the triangulation already
+          supplied to the municipality, required two trigonometric points on every sheet, imposed narrow
+          tolerances on polygon measurements and heights, and prescribed rigorous levelling in two stages.
+          Everything was measured from the ground, by municipal teams, over many years. The sources describe the
+          geometric methods but don't say exactly which instruments were used.
+        </p>
+
+        <h2>On the detail shown within private properties</h2>
+        <p>
+          What sometimes looks like a house plan is generally just its footprint: wings, outbuildings, courtyards,
+          light wells and other divisions of the built mass. Walls dividing the internal rooms are normally not
+          shown. Gardens and estates, however, contain walls, paths, cultivation, ponds and other details that
+          would not necessarily have been visible from a public road. There are three plausible sources for that
+          information: entry to the grounds, a plan supplied by the owner, or documentation already held by the
+          municipal services. The published records don't establish which route was used for any given property.
+        </p>
+        <p>
+          The archival route is historically possible. The City Council archive preserves eighteenth- and
+          nineteenth-century plans, elevation drawings and licences, although at the time these mostly existed as
+          individual documents rather than the organised, comprehensive building-permit files that became customary
+          in the early twentieth century. The <em>Books of House Plans</em> show that many applications for
+          building work passed through the municipality—but much of that work concerned façades, repairs, new
+          doors and windows, or additional floors, and would not necessarily record an entire property, its
+          gardens or water features. The archive could fill gaps here and there, but it was not, by itself, a
+          complete and current cadastre of the whole municipality.
+        </p>
+        <p>
+          Nor has evidence been found that Teles Ferreira's team systematically searched those collections. The
+          surviving accounts distinguish field and drawing-office work, but identify neither an archivist nor a
+          documentary compilation campaign. In 1892 Teles Ferreira proposed that projects subsequently submitted
+          to the Council should be located on copies of the new general map, and described the cadastral reduction
+          as a base for a future reliable property matrix. Both proposals suggest that, before the map, the
+          Council's information had never been assembled onto a common geographical base.
+        </p>
+        <p>
+          The programme itself weakens the idea of universal compulsory access. It allowed private properties
+          to be represented “in masses, but with their boundaries marked alongside public roads”. Of the original
+          464 field drafts, 428 survive, including some digital reproductions, but the accessible records contain
+          no clause giving the surveyors a general right of entry, and no documentation of permissions, refusals
+          or plans supplied by owners.
+        </p>
+        <p>
+          The Constitutional Charter of 1826, then in force, declared the home inviolable and permitted daytime
+          entry only in cases and by procedures established by law. That protection concerned the dwelling, and
+          doesn't by itself settle access to the grounds of an estate. The earliest Portuguese cadastral provision
+          I could find that expressly granted officials access to private property, with a fine for obstruction,
+          dates from 1911—nineteen years after the map was completed—and can't be applied retrospectively. The
+          most defensible conclusion is that surveyors probably entered many properties through cooperation or
+          agreement, but there is no published proof that owners couldn't refuse.
+        </p>
+        <h2>Completion, surviving sheets and public edition</h2>
+        <p>
+          Teles Ferreira published an eight-page descriptive memorandum through the City Council in 1890. In a
+          report dated 30 March 1892 he declared the 1:500 survey practically complete, with corrections still
+          pending so the whole work could be consistently referred to that year. This is what explains the map’s
+          date: 1892 is its reference and completion year, not the year every sheet was surveyed, nor the year the
+          full map first went on sale.
         </p>
         <p>
           Two manuscript versions were prepared at 1:500: one in black and white and another coloured in
@@ -388,49 +511,30 @@
           catalogue describes the digitised coloured sequence through 464 individual records. From the master
           survey, the office also produced a cadastral reduction at 1:2,500 and a general map at 1:5,000.
         </p>
-
-        <h2>Completion and public edition</h2>
-        <p>
-          Teles Ferreira published an eight-page descriptive memorandum through the City Council in 1890. In a
-          report dated 30 March 1892 he stated that the 1:500 survey was practically complete, although corrections
-          remained so that the entire work could be consistently referred to that year. This distinction explains
-          the map’s date: 1892 is its reference and completion year, not the year in which every sheet was surveyed
-          or the full map was first placed on sale.
-        </p>
         <p>
           On 11 May 1892 the Council opened a further competition to engrave the 1:5,000 reduction. Teles Ferreira
-          supported the proposal submitted by the group represented by Cassiano Augusto Vidal da Maia at the
-          national Directorate-General of Geodetic Works, specialists in engraving on lithographic stone. The
-          original was sent to Lisbon in June 1893. The engraved stones and printed map returned to Porto in June
-          1895.
+          supported the proposal from the group represented by Cassiano Augusto Vidal da Maia at the national
+          Directorate-General of Geodetic Works, specialists in engraving on lithographic stone. The original went
+          to Lisbon in June 1893; the engraved stones and printed map returned to Porto in June 1895. Engraving
+          and printing 1,500 copies cost 5,000$000 réis—five contos, roughly €220,000 in today's purchasing power.
         </p>
         <p>
-          The engraving and production of 1,500 copies cost <strong>5,000$000 réis—five contos, or five million
-          réis—approximately €220,000 in 2026 consumer-price terms</strong>. This modern figure is necessarily an
-          order-of-magnitude comparison: it converts five contos at the late nineteenth-century parity of 4$500
-          réis to the pound sterling, applies the United Kingdom’s long-run consumer-price index, and then converts
-          the result to euros. Portugal had suspended gold convertibility in 1891 and no continuous official
-          Portuguese consumer-price series extends back to 1895. At the preceding gold parity, the same nominal
-          amount represented approximately 8.13 kilograms of fine gold, illustrating why different historical
-          value measures can produce much larger equivalents.
-        </p>
-        <p>
-          Teles Ferreira proposed recovering part of the expenditure by selling copies to public offices and the
-          general public. He expected particular interest in Brazil, where emigrants from northern Portugal might
-          buy a plan of Porto for the memories it preserved. The resulting public edition was a six-sheet
-          lithograph at 1:5,000, published in 1895 and explicitly described in its title as reduced from the 1:500
-          survey ordered by the Porto City Council, referred to the year 1892, and directed by Teles Ferreira with
-          the assistance of Fernando da Costa Maia and the other employees.
+          Teles Ferreira proposed recovering part of the cost by selling copies to public offices and the general
+          public. He counted on particular interest from Brazil, where emigrants from northern Portugal might buy
+          a plan of Porto for the memories it held. The public edition was a six-sheet lithograph at 1:5,000,
+          published in 1895, its title expressly describing it as reduced from the 1:500 survey ordered by the
+          Porto City Council, referred to the year 1892, and directed by Teles Ferreira with the assistance of
+          Fernando da Costa Maia and the other employees.
         </p>
 
-        <h2>Municipal custody and later publication</h2>
+        <h2>Municipal ownership, later use and rediscovery</h2>
         <p>
-          The map was municipal property from its inception; it was not a private work later acquired by Porto.
-          The coloured 1:500 original was formally delivered to the City Council archive on 18 August 1893 and
-          transferred internally to the Porto Municipal Historical Archive in 1984. For decades the survey
-          remained the Council’s only rigorous representation of the urban territory at 1:500 and served as the
-          model for later updates. It continued to underpin municipal planning until a new generation of surveys
-          and plans emerged in the middle of the twentieth century.
+          The map was municipal from the start—not a private work that Porto later acquired. The coloured 1:500
+          original was formally delivered to the City Council archive on 18 August 1893 and transferred internally
+          to the Porto Municipal Historical Archive in 1984. For decades it remained the Council’s only rigorous
+          representation of the urban territory at 1:500, served as the model for later updates, and underpinned
+          municipal planning until a new generation of surveys and plans emerged in the middle of the twentieth
+          century.
         </p>
         <p>
           In 1992 the municipality marked its centenary with the exhibition and catalogue <em>An Exemplary
@@ -442,21 +546,30 @@
           In 2018 the Council launched its georeferenced Historical Interactive Maps of Porto service, initially
           based on the Teles Ferreira survey.
         </p>
+      </section>
 
-        <h2>Sources</h2>
-        <ul>
-          <li><a href="https://sigarra.up.pt/faup/pt/conteudos_service.conteudos_cont?pct_id=7000&amp;pv_cod=36SaaCaO5Nb5" rel="noopener">Rui Tavares, “The 1892 Topographical Map of the City of Porto: A Cartographic Basis for Municipal Urban Management”</a>.</li>
-          <li><a href="https://gisaweb.cm-porto.pt/units-of-description/documents/380170/" rel="noopener">Porto Municipal Archive, catalogue record PT-CMP-AM/PUB/CMPRT/PC/0020</a>.</li>
-          <li><a href="https://eviterbo.fcsh.unl.pt/wiki/Augusto_Teles_Ferreira" rel="noopener">eViterbo, NOVA University Lisbon, biographical record for Augusto Teles Ferreira</a>.</li>
-          <li><a href="https://www.monumentos.gov.pt/Site/APP_PagesUser/SIPA.aspx?id=26828" rel="noopener">Portuguese architectural heritage inventory, Viana do Castelo historical record</a>.</li>
-          <li><a href="https://www.fc.up.pt/pessoas/jagoncal/porto/" rel="noopener">University of Porto Faculty of Sciences, historical maps of Porto</a>.</li>
-          <li><a href="https://www.cm-porto.pt/files/uploads/cms/cmp/241/files/3934/relatorio-de-gestao-2018.pdf" rel="noopener">Porto City Council, 2018 management report</a>.</li>
-          <li><a href="https://cochinilha.wordpress.com/2017/03/20/porto-1892/" rel="noopener">Contemporary notice of the complete online release, 20 March 2017</a>.</li>
+      <h2>Sources / Fontes</h2>
+      <ul>
+          <li><a href="https://sigarra.up.pt/faup/pt/conteudos_service.conteudos_cont?pct_id=7000&amp;pv_cod=36SaaCaO5Nb5" rel="noopener">Rui Tavares, “A Carta Topográfica da Cidade do Porto de 1892: Uma Base Cartográfica para a Gestão Urbanística Municipal”</a>.</li>
+          <li><a href="https://www.umalinhanobolso.com/uploads/1/4/0/1/140143557/01_-_decreto_de_31_12_1864.pdf" rel="noopener">Decreto de 31 de Dezembro de 1864, incluindo as disposições relativas ao plano de melhoramentos do Porto</a>.</li>
+          <li><a href="https://www.parlamento.pt/VisitaParlamento/Paginas/BiogJoaoCrisostomo.aspx" rel="noopener">Assembleia da República, nota biográfica de João Crisóstomo de Abreu e Sousa</a>.</li>
+          <li><a href="https://portugal.gov.pt/pt/gc22/governo/governos-anteriores/chefes-do-governo-desde-1821" rel="noopener">República Portuguesa, cronologia dos chefes do Governo desde 1821</a>.</li>
+          <li><a href="https://gisaweb.cm-porto.pt/units-of-description/documents/380170/" rel="noopener">Arquivo Municipal do Porto, registo de catálogo PT-CMP-AM/PUB/CMPRT/PC/0020</a>.</li>
+          <li><a href="https://eviterbo.fcsh.unl.pt/wiki/Augusto_Teles_Ferreira" rel="noopener">eViterbo, Universidade Nova de Lisboa, registo biográfico de Augusto Teles Ferreira</a>.</li>
+          <li><a href="https://www.monumentos.gov.pt/Site/APP_PagesUser/SIPA.aspx?id=26828" rel="noopener">Inventário português do património arquitectónico, registo histórico de Viana do Castelo</a>.</li>
+          <li><a href="https://www.fc.up.pt/pessoas/jagoncal/porto/" rel="noopener">Faculdade de Ciências da Universidade do Porto, mapas históricos do Porto</a>.</li>
+          <li><a href="https://i2ads.up.pt/wp-content/uploads/2022/07/A-boa-vista-de-GustavoAGeSouza.pdf" rel="noopener">Vasco Cardoso, transcrição e análise do programa municipal de levantamento de 1869</a>.</li>
+          <li><a href="https://ibercarto.ign.es/resources/documentos/encuentros/08/o-acervo-cartografico-do-arquivo-municipal-do-porto-ao-servico-da-autarquia-e-do-cidadao-daniela-fernandes.pdf" rel="noopener">Arquivo Municipal do Porto, descrição e tratamento das minutas de campo</a>.</li>
+          <li><a href="https://gisaweb.cm-porto.pt/units-of-description/documents/805371/" rel="noopener">Arquivo Municipal do Porto, minuta de campo da quadrícula 208</a>.</li>
+          <li><a href="https://impactum-journals.uc.pt/boletimauc/issue/download/715/304" rel="noopener">Boletim do Arquivo da Universidade de Coimbra, estudo sobre gestão urbanística e documentação de obras particulares</a>.</li>
+          <li><a href="https://web.novalaw.unl.pt/Anexos/Investigacao/1532.pdf" rel="noopener">Carta Constitucional da Monarquia Portuguesa de 1826, artigo 145.º, § 6.º</a>.</li>
+          <li><a href="https://files.dre.pt/gratuitos/1s/1911/08/18600.pdf" rel="noopener"><em>Diário do Governo</em>, 11 de Agosto de 1911, artigo 47.º da lei cadastral</a>.</li>
+          <li><a href="https://www.cm-porto.pt/files/uploads/cms/cmp/241/files/3934/relatorio-de-gestao-2018.pdf" rel="noopener">Câmara Municipal do Porto, Relatório de Gestão de 2018</a>.</li>
+          <li><a href="https://cochinilha.wordpress.com/2017/03/20/porto-1892/" rel="noopener">Notícia contemporânea da disponibilização integral em linha, 20 de Março de 2017</a>.</li>
           <li><a href="https://www.nber.org/papers/w4860" rel="noopener">National Bureau of Economic Research, Portuguese sterling parity under the gold standard</a>.</li>
           <li><a href="https://www.bankofengland.co.uk/monetary-policy/inflation/inflation-calculator" rel="noopener">Bank of England, long-run inflation methodology</a>.</li>
           <li><a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" rel="noopener">European Central Bank, euro reference exchange rates</a>.</li>
-        </ul>
-      </section>
+      </ul>
     </div>
   </div>
 
@@ -469,7 +582,7 @@
       code by <a href="https://brnrds.com/work/vintage-map-of-porto" rel="noopener">Bernardo Santos</a>
     </div>
   </footer>
-  <script src="js/bottom-bar.js"></script>
+  <script src="js/bottom-bar.js?v=2"></script>
 
   <noscript>
     <div class="noscript-info">
