@@ -3,8 +3,7 @@ body {
     margin:     0;
     color:          #333;
     font-family: Helvetica, Arial, FreeSans, san-serif;
-    background-image: url("../blank.png");
-    background-repeat: repeat;
+    background: #e8e9dc;
     overflow: hidden;
 }
 
@@ -13,8 +12,7 @@ body {
     width:      100%;
     height:     100vh;
     color:      #333;
-    background-color: transparent;
-    background-image : url('../blank.png');
+    background: #e8e9dc;
 }
 .openseadragon.front-page {
     height: 586px;
@@ -70,11 +68,9 @@ ol.for-examples li {
 .bottom-bar {
     position: fixed;
     bottom: 0;
-    left: 0;
     right: 0;
     z-index: 10000;
-    background-image: url("../blank.png");
-    background-repeat: repeat;
+    background: #e8e9dc;
     font-family: Verdana, Helvetica, Arial, Sans-serif;
     font-size: 11px;
     color: #333;
@@ -83,7 +79,7 @@ ol.for-examples li {
 .bottom-bar-credits {
     padding: 5px;
     text-align: right;
-    background-image: url("../blank.png");
+    background: #e8e9dc;
 }
 
 .bottom-bar-credits a,
